@@ -81,8 +81,7 @@ public class Main {
     static private void deleteDir() {
         try (Stream<Path> f = Files.walk(Path.of(DIRECTORY))) {
             f.map(Path::toFile).forEach(File::delete);
-        } catch (Exception ignored) {
-        }
+        } catch (Exception ignored) {}
     }
 
 }
